@@ -138,8 +138,9 @@ color: hsl(228, 45%, 44%);
 }
 
 .Card__tag {
-  padding: var(--spacing-50) var(--spacing-100);
+  padding: var(--spacing-50) var(--spacing-150);
   background: var(--yellow);
+  border-radius: .25rem;
 }
 
 .Card__date {
@@ -148,6 +149,7 @@ color: hsl(228, 45%, 44%);
 
 .Card__description {
     margin: 0;
+    color: var(--gray-500);
 }
 
 .Author {
