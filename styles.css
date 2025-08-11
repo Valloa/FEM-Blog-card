@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+
+  --spacing-300: 1.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
+
+  --transition: all .2s ease;
+
+  font-family: Figtree, sans-serif;
+
+    color: var(--gray-950);
+  background: var(--yellow);
+}
+
+body {
+    position: relative;
+  display: grid;
+  padding-inline: var(--spacing-300);
+  padding-block: 5.5rem;
+  min-block-size: 100dvb;
+  margin: 0;
+}
+
+main {
+    display: contents;
+}
+
+.attribution {
+    position: absolute;
+    inset-inline: 50% auto;
+    inset-block: auto 1rem;
+    translate: -50%;
+}
+
+.Text1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.Text2 {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.Text3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.Text3bold {
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.Card {
+    place-self: center;
+    position: relative;
+    display: grid;
+    gap: var(--spacing-300);
+    inline-size: min(100%, 24rem);
+    padding: var(--spacing-300);
+    background: var(--white);
+    border: currentColor solid 1px;
+    border-radius: 1.25rem;
+    box-shadow: .5rem .5rem 0 0 black;
+    transition: var(--transition);
+}
+
+.Card:has(.Card__title-link:active) {
+    box-shadow: .25rem .25rem 0 0 black;
+}
+
+.Card__image {
+    display: block;
+    inline-size: 100%;
+    aspect-ratio: 336 / 201;
+    object-fit: cover;
+    border-radius: .625rem;
+}
+
+.Card__content {
+    display: grid;
+    gap: var(--spacing-150);
+}
+
+.Card__title {
+    margin-block: 0;
+}
+
+.Card__title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.Card__title-link::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    display: block;
+}
+
+.Card__title-link:hover {
+    color: var(--yellow);
+}
+
+.Card__tags {
+    order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-50);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.Card__tag {
+  padding: var(--spacing-50) var(--spacing-100);
+  background: var(--yellow);
+}
+
+.Card__date {
+    order: -1;
+}
+
+.Card__description {
+    margin: 0;
+}
+
+.Author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-150);
+}
+
+.Author__avatar {
+    display: block;
+    inline-size: 2rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.Author__name {
+    margin-block: 0;
+}
